@@ -11,3 +11,19 @@ git rm -r --cached folder
 git commit -m "Removed folder from repository"
 git push origin main
 ```
+
+## Rest API
+A RESTful API to return predictions from a trained ML model, built with Python 3 and Flask-RESTX
+
+Development set-up instructions
+First, open a command line interface and clone the GitHub repo in your workspace
+
+```
+PS > git clone https://github.com/Anirban6393/x0pa-ai.git
+PS > cd x0pa-ai
+```
+
+Once dependencies are installed, set up the requirements.txt to download required packages.
+```
+(venv) PS > pip install -r requirements.txt
+```
