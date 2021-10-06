@@ -15,7 +15,7 @@ git push origin main
 ```
 
 ## Rest API
-A RESTful API to return predictions from a trained ML model, built with Python 3 and Flask-RESTX
+A REST API to return predictions from a trained ML model, built with Python 3 and Flask-REST module.
 
 Development set-up instructions
 First, open a command line interface and clone the GitHub repo in your workspace
@@ -29,9 +29,16 @@ Once dependencies are installed, set up the requirements.txt to download require
 ```
 (venv) PS > pip install -r requirements.txt
 ```
+Now, run app.py python script that interfaces with end users uploading some excel file and dumping into sqlite3 database.
+Upload x0pa_ds_interview_round_2_test.xlsx 
+
+(venv) PS > python app.py
+```
+Open the URL http://127.0.0.1:1000/ with your browser to view the list of job titles predicted by model for given job descriptions.
+
 ## Docker Command
 
-Build docker image to begin with. It utilises dockerfile.
+Build docker image to begin with. It utilises dockerfile in the directory.
 ```
 docker build -t akc/test-nlp .
 ```
