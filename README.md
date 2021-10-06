@@ -1,5 +1,7 @@
 # x0pa-ai
 
+## Creating Git Repo, Commiting Changes
+
 Git commands for creating github repository from local directory command line, pushing folder to created repo, deleting selective folders and commit changes
 
 ```
