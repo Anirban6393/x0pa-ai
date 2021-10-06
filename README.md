@@ -1,4 +1,4 @@
-# x0pa-ai
+# X0PA-AI
 
 ## Creating Git Repo, Commiting Changes
 
