@@ -1,4 +1,18 @@
-# X0PA-AI
+# X0PA-AI: Predictive Model For Classifying Job Descriptions Into Categories/Titles
+
+## Importable Modules
+
+Inside the **nlp_module** folder, some importable modules I created worth highlighting.
+
+Dataprocessor.py - Class and its methods for importing all formats of files, transformation into pivot table, normalisation
+
+Modelevaluator.py - Contains class and its methods for model training, cross validation, evaluation and persistence into pickle file
+
+I have also added _init_.py file mentioning this scripts inside this directory so that these scripts are considered as importable modules.
+```
+from mp.Dataprocessor import *
+from mp.Modelevaluator import *
+```
 
 ## Creating Git Repo, Commiting Changes
 
