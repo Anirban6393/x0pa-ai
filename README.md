@@ -8,10 +8,10 @@ Dataprocessor.py - Class and its methods for importing all formats of files, tra
 
 Modelevaluator.py - Contains class and its methods for model training, cross validation, evaluation and persistence into pickle file
 
-I have also added _init_.py file mentioning this scripts inside this directory so that these scripts are considered as importable modules.
+I have also added __init__.py file mentioning this scripts inside this directory so that these scripts are considered as importable modules.
 ```
-from mp.Dataprocessor import *
-from mp.Modelevaluator import *
+from nlp_module.Dataprocessor import *
+from nlp_module.Modelevaluator import *
 ```
 
 ## Creating Git Repo, Commiting Changes
