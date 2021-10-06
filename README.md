@@ -4,9 +4,9 @@
 
 Inside the **nlp_module** folder, some importable modules I created worth highlighting.
 
-Dataprocessor.py - Class and its methods for importing all formats of files, transformation into pivot table, normalisation
+**Dataprocessor.py** - Class and its methods for importing all formats of files, transformation into pivot table, normalisation
 
-Modelevaluator.py - Contains class and its methods for model training, cross validation, evaluation and persistence into pickle file
+**Modelevaluator.py** - Contains class and its methods for model training, cross validation, evaluation and persistence into pickle file
 
 I have also added __init__.py file mentioning this scripts inside this directory so that these scripts are considered as importable modules.
 ```
