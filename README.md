@@ -34,7 +34,6 @@ Once dependencies are installed, set up the requirements.txt to download require
 Build docker image to begin with. It utilises dockerfile.
 ```
 docker build -t akc/test-nlp .
-
 ```
 Next, you can run the docker commands. Be sure to publish export ports for all containers to access.
 ``` 
