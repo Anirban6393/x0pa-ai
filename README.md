@@ -29,3 +29,15 @@ Once dependencies are installed, set up the requirements.txt to download require
 ```
 (venv) PS > pip install -r requirements.txt
 ```
+## Docker Command
+
+Build docker image to begin with. It utilises dockerfile.
+```
+docker build -t akc/test-nlp .
+
+```
+Next, you can run the docker commands. Be sure to publish export ports for all containers to access.
+``` 
+docker run -it akc/test-nlp
+docker run -P -d akc/test-nlp
+```
