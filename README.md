@@ -32,6 +32,7 @@ Once dependencies are installed, set up the requirements.txt to download require
 Now, run app.py python script that interfaces with end users uploading some excel file and dumping into sqlite3 database.
 Upload x0pa_ds_interview_round_2_test.xlsx 
 
+```
 (venv) PS > python app.py
 ```
 Open the URL http://127.0.0.1:1000/ with your browser to view the list of job titles predicted by model for given job descriptions.
