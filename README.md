@@ -35,7 +35,7 @@ from nlp_module.Modelevaluator import *
 ```
 
 ## Streamlit API
-A Streamlit API to return predictions from a trained ML model, built with Python 3 and Flask-REST module.
+A Streamlit API to return predictions from a trained ML model.
 
 Development set-up instructions
 First, open a command line interface and clone the GitHub repo in your workspace
@@ -50,20 +50,26 @@ Once dependencies are installed, set up the requirements.txt to download require
 pip install -r requirements.txt
 ```
 Now, run app.py python script that interfaces with end users uploading some excel file and dumping into sqlite3 database.
-Upload **x0pa_ds_interview_round_2_test.xlsx** 
+Upload **x0pa_ds_interview_round_2_test.xlsx**.
 
 ```
 python app.py
 ```
 Open the URL http://localhost:8501/ with your browser to view the list of job titles predicted by model for given job descriptions.
 
-## Docker Command
+You can also send a SQL query to manipulate and view data from sqlite3 stored data. For instance, below query will give you number of job postings for each job category.
+
+```
+SELECT Type, COUNT(ID) as Job_Counts FROM Jobs GROUP BY Type ORDER BY Job_Counts DESC;
+```
+
+## Docker Commands
 
 Build docker image to begin with. It utilises dockerfile in the directory.
 ```
 docker build -f Dockerfile -t app/x0pa .
 ```
-Next, you can run the docker commands. Be sure to publish export ports for all containers to access.
+Next, create and run a docker command in detached mode.
 ``` 
 docker run -p 8501:8501 -d app/x0pa
 ```
