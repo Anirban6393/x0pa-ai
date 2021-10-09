@@ -1,15 +1,13 @@
-FROM python:3.7-slim-buster
-
-WORKDIR /opt/app
-VOLUME /opt/app
-
-COPY . . 
-
-RUN pip install -r requirements.txt
-EXPOSE 1000:1000
+FROM python:3.8
+EXPOSE 8501
+WORKDIR /app
+COPY requirements.txt ./requirements.txt
+RUN pip3 install -r requirements.txt
+COPY . .
+CMD streamlit run app.py
 
 
-CMD ["python","./app.py"]
+
 
 
 
