@@ -17,7 +17,7 @@ git push origin main
 ## Importable Modules & Data Files
 
 **x0pa_ds_interview_round_2_train.xlsx** - Training Dataset used to train model<br>
-**x0pa_ds_interview_round_2_test.xlsx** - Test Dataset without Job category column used to make model prediction and determine performance
+**x0pa_ds_interview_round_2_test.xlsx** - Test Dataset without Job category column used to make model prediction and determine performance<br>
 **x0pa_ds_interview_round_2_test_predictions.xlsx** - Test dataset including model prediction column
 
 **sgd_classifier.pkl** - Trained SGD classifier parameters for input data inferencing pipeline <br>
@@ -25,8 +25,7 @@ git push origin main
 
 Inside the **nlp_module** folder, some importable modules I created worth highlighting.
 
-**Dataprocessor.py** - Class and its methods for importing all formats of files, transformation into pivot table, normalisation
-
+**Dataprocessor.py** - Class and its methods for importing all formats of files, transformation into pivot table, normalisation<br>
 **Modelevaluator.py** - Contains class and its methods for model training, cross validation, evaluation and persistence into pickle file
 
 I have also added __init__.py file mentioning this scripts inside this directory so that these scripts are considered as importable modules.
