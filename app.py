@@ -14,7 +14,7 @@ engine = create_engine('sqlite:///pynlp.db', echo=False)
 model = pickle.load(open("sgd_classifier.pkl",'rb'))
 pipe = pickle.load(open("pipe.pkl",'rb'))
 
-file = st.file_uploader("Choose an excel file", type=["csv","xlsx"])
+file = st.file_uploader("Choose a file", type=["csv","xlsx"])
 
 if st.button('go!'):
         
