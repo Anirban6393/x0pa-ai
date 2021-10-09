@@ -35,19 +35,19 @@ Development set-up instructions
 First, open a command line interface and clone the GitHub repo in your workspace
 
 ```
-PS > git clone https://github.com/Anirban6393/x0pa-ai.git
-PS > cd x0pa-ai
+git clone https://github.com/Anirban6393/x0pa-ai.git
+cd x0pa-ai
 ```
 
 Once dependencies are installed, set up the requirements.txt to download required packages.
 ```
-(venv) PS > pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 Now, run app.py python script that interfaces with end users uploading some excel file and dumping into sqlite3 database.
 Upload **x0pa_ds_interview_round_2_test.xlsx** 
 
 ```
-(venv) PS > python app.py
+python app.py
 ```
 Open the URL http://localhost:8501/ with your browser to view the list of job titles predicted by model for given job descriptions.
 
@@ -60,4 +60,25 @@ docker build -f Dockerfile -t app/x0pa .
 Next, you can run the docker commands. Be sure to publish export ports for all containers to access.
 ``` 
 docker run -p 8501:8501 -d app/x0pa
+```
+View all containers running.
+``` 
+docker ps -a 
+```
+Stop and kill a container.
+``` 
+docker container stop <container_id>/<container_name>
+docker container kill <container_id>/<container_name>
+```
+Restart a stopped container.
+``` 
+docker container restart <container_id>/<container_name>  
+```
+
+Delve into a docker container. Install vim in order to download linux editor for viewing and editing files inside container directory.
+```
+docker exec -it angry_mayer bash
+apt-get install vim
+ls -lrt
+vi <filename>
 ```
