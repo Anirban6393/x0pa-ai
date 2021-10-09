@@ -28,8 +28,8 @@ git commit -m "Removed folder from repository"
 git push origin main
 ```
 
-## Rest API
-A REST API to return predictions from a trained ML model, built with Python 3 and Flask-REST module.
+## Streamlit API
+A Streamlit API to return predictions from a trained ML model, built with Python 3 and Flask-REST module.
 
 Development set-up instructions
 First, open a command line interface and clone the GitHub repo in your workspace
@@ -44,21 +44,20 @@ Once dependencies are installed, set up the requirements.txt to download require
 (venv) PS > pip install -r requirements.txt
 ```
 Now, run app.py python script that interfaces with end users uploading some excel file and dumping into sqlite3 database.
-Upload x0pa_ds_interview_round_2_test.xlsx 
+Upload **x0pa_ds_interview_round_2_test.xlsx** 
 
 ```
 (venv) PS > python app.py
 ```
-Open the URL http://127.0.0.1:1000/ with your browser to view the list of job titles predicted by model for given job descriptions.
+Open the URL http://localhost:8501/ with your browser to view the list of job titles predicted by model for given job descriptions.
 
 ## Docker Command
 
 Build docker image to begin with. It utilises dockerfile in the directory.
 ```
-docker build -t akc/test-nlp .
+docker build -f Dockerfile -t app/x0pa .
 ```
 Next, you can run the docker commands. Be sure to publish export ports for all containers to access.
 ``` 
-docker run -it akc/test-nlp
-docker run -P -d akc/test-nlp
+docker run -p 8501:8501 -d app/x0pa
 ```
