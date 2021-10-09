@@ -26,7 +26,7 @@ if st.button('go!'):
         df_tfidf = pipe.transform(df['Job Title'])
         df['Type'] = model.predict(df_tfidf)
         st.dataframe(df)
-        #df.to_sql('Jobs', con=engine, if_exists='fail',index=False)
+        #df.to_sql('Jobs', con=engine, if_exists='append',index=False)
 
 
 query = st.text_input("Type SQL Query")
