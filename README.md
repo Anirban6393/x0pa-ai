@@ -77,7 +77,7 @@ docker container restart <container_id>/<container_name>
 
 Delve into a docker container. Install vim in order to download linux editor for viewing and editing files inside container directory.
 ```
-docker exec -it angry_mayer bash
+docker exec -it <container_id>/<container_name> bash
 apt-get install vim
 ls -lrt
 vi <filename>
