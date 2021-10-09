@@ -94,3 +94,9 @@ apt-get install vim
 ls -lrt
 vi <filename>
 ```
+
+For every container, this line is commented. The test excel file once ingested into the database that's why. Uncomment it if you want to ingest additional files.
+```
+vi app.py
+#df.to_sql('Jobs', con=engine, if_exists='append',index=False)
+```
