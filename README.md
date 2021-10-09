@@ -1,19 +1,5 @@
 # X0PA-AI: Predictive Model For Classifying Job Descriptions Into Categories/Titles
 
-## Importable Modules & Data Files
-
-Inside the **nlp_module** folder, some importable modules I created worth highlighting.
-
-**Dataprocessor.py** - Class and its methods for importing all formats of files, transformation into pivot table, normalisation
-
-**Modelevaluator.py** - Contains class and its methods for model training, cross validation, evaluation and persistence into pickle file
-
-I have also added __init__.py file mentioning this scripts inside this directory so that these scripts are considered as importable modules.
-```
-from nlp_module.Dataprocessor import *
-from nlp_module.Modelevaluator import *
-```
-
 ## Creating Git Repo, Commiting Changes
 
 Git commands for creating github repository from local directory command line, pushing folder to created repo, deleting selective folders and commit changes
@@ -26,6 +12,20 @@ git pull --set-upstream origin x0pa-ai
 git rm -r --cached folder
 git commit -m "Removed folder from repository"
 git push origin main
+```
+
+## Importable Modules & Data Files
+
+Inside the **nlp_module** folder, some importable modules I created worth highlighting.
+
+**Dataprocessor.py** - Class and its methods for importing all formats of files, transformation into pivot table, normalisation
+
+**Modelevaluator.py** - Contains class and its methods for model training, cross validation, evaluation and persistence into pickle file
+
+I have also added __init__.py file mentioning this scripts inside this directory so that these scripts are considered as importable modules.
+```
+from nlp_module.Dataprocessor import *
+from nlp_module.Modelevaluator import *
 ```
 
 ## Streamlit API
