@@ -16,6 +16,13 @@ git push origin main
 
 ## Importable Modules & Data Files
 
+**x0pa_ds_interview_round_2_train.xlsx** - Training Dataset used to train model
+**x0pa_ds_interview_round_2_test.xlsx** - Test Dataset without Job category column used to make model prediction and determine performance
+**x0pa_ds_interview_round_2_test_predictions.xlsx** - Test dataset including model prediction column
+
+**sgd_classifier.pkl** - Trained SGD classifier parameters for input data inferencing pipeline
+**pipe.pkl** - Sklearn pipeline used to preprocess input job description on train dataset, can be used for inference pipeline 
+
 Inside the **nlp_module** folder, some importable modules I created worth highlighting.
 
 **Dataprocessor.py** - Class and its methods for importing all formats of files, transformation into pivot table, normalisation
