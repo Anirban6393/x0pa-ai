@@ -1,6 +1,6 @@
 # X0PA-AI: Predictive Model For Classifying Job Descriptions Into Categories/Titles
 
-## Importable Modules
+## Importable Modules & Data Files
 
 Inside the **nlp_module** folder, some importable modules I created worth highlighting.
 
