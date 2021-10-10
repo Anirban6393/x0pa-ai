@@ -6,24 +6,26 @@ from sqlalchemy import *
 from nlp_module.Processor import *
 
 engine = create_engine('sqlite:///pynlp.db', echo=False)
-
-
 model = pickle.load(open("sgd_classifier.pkl",'rb'))
 pipe = pickle.load(open("pipe.pkl",'rb'))
 
-file = st.file_uploader("Choose a file", type=["csv","xlsx"])
+files = st.file_uploader("Choose a file", type=["xlsx"], accept_multiple_files=True)
 
 if st.button('go!'):
-        
-    all_sheet = pd.ExcelFile(file)   
-    sheets = all_sheet.sheet_names
+    li=[]
+    for file in files:
+        all_sheet = pd.ExcelFile(file)   
+        sheets = all_sheet.sheet_names       
+        for i in range(len(sheets)):
+            data = pd.read_excel(file, sheet_name = sheets[i])
+            li.append(data)
+            
+    df = pd.concat(li, axis=0, ignore_index=True)
+    df_tfidf = pipe.transform(df['Job Title'])
+    df['Type'] = model.predict(df_tfidf)
+    st.dataframe(df)
+    #df.to_sql('Jobs', con=engine, if_exists='append',index=False)
 
-    for i in range(len(sheets)):
-        df = pd.read_excel(file, sheet_name = sheets[i])
-        df_tfidf = pipe.transform(df['Job Title'])
-        df['Type'] = model.predict(df_tfidf)
-        st.dataframe(df)
-        #df.to_sql('Jobs', con=engine, if_exists='append',index=False)
 
 
 query = st.text_input("Type SQL Query")
