@@ -53,7 +53,7 @@ Now, run app.py python script that interfaces with end users uploading some exce
 Upload **x0pa_ds_interview_round_2_test.xlsx**.
 
 ```
-python app.py
+streamlit run app.py
 ```
 Open the URL http://localhost:8501/ with your browser to view the list of job titles predicted by model for given job descriptions.
 
