@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-from sqlalchemy import *
+from sqlalchemy import create_engine
 from nlp_module.Processor import *
 
 engine = create_engine('sqlite:///pynlp.db', echo=False)
